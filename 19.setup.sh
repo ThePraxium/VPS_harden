@@ -117,8 +117,6 @@ sudo ufw deny 22
 
 echo "New SSH port is $RANDOM_PORT"
 
-
-
 # Restart SSH service to apply changes
 echo "Restarting SSH service..."
 sudo systemctl restart sshd
@@ -126,7 +124,6 @@ sudo systemctl restart sshd
 # Install Fail2Ban for added security
 echo "Installing Fail2Ban..."
 sudo apt install fail2ban -y
-
 
 #making keys accessible tos cp because i disabled root ssh
 cp ~/.ssh/id_rsa_user1 /home/ubuntu/
@@ -147,8 +144,9 @@ echo "Credentials for $NEW_USER2: Username=$NEW_USER2, Password=$NEW_PASS2"
 
 echo "New SSH port is $RANDOM_PORT"
 
-echo "public IP is $INSTANCE_IP"
+echo "VPS public IP is $INSTANCE_IP"
 
 echo "ssh command for this would be"
 echo "scp -P $RANDOM_PORT -i ~/.ssh/AWS_KEY.pem ubuntu@$INSTANCE_IP:~/id_rsa_user1 ~/.ssh/"
 echo "ssh -i ~.ssh/id_rsa_user1 -p $RANDOM_PORT $NEW_USER1@$INSTANCE_IP"
+ Username=CnntTbP62Lh8cPNBjRhrG2AnRSTBfl, Password=WziKthAAdCKzuLLjYDTDz8amyAOhsC
